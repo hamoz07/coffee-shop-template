@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Cairo:wght@200;700;800;900;1000&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700&family=Josefin+Sans&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Nunito:wght@300;400;600;700;900&family=Open+Sans&family=Outfit:wght@400;700&family=Poppins:wght@200;400;600&family=Red+Hat+Display:wght@500;700;900&family=Roboto&family=Work+Sans:ital,wght@0,100;0,200;0,400;0,500;0,700;0,800;1,200;1,600;1,800&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 17px;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue: #9BBEC2;
+    --black: #32312F;
+    --pink: #F91D40;
+    --main-transition: .5s
+}
+
+body {
+    width: 100%;
+}
+
+.box,
+.mobile {
+    display: none;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+@media (max-width:756px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .coffe-links li a.active_sec {
+        color: white;
+    }
+
+    nav ul li {
+        font-size: 13px;
+    }
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 23px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.logo .dot {
+    width: 0.7rem;
+    height: .7rem;
+    background-color: var(--black);
+    border-radius: 50%;
+    margin: .2rem;
+    display: inline-block;
+}
+
+.coffe-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.coffe-links li a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--main-transition);
+    color: white;
+}
+
+.coffe-links li a::after {
+    content: "";
+    height: 3px;
+    display: block;
+    background-color: var(--blue);
+    width: 0;
+    transition: width ease-in-out .4s;
+}
+
+.coffe-links li a:hover::after {
+    width: 100%;
+}
+
+.coffe-links li a.active_sec,
+.coffe-links li a:hover {
+    color: var(--blue);
+}
+
+@media (max-width:756px) {
+
+    .coffe-links li a.active_sec {
+        color: white;
+    }
+
+}
+
+/* start hero */
+.welcome {
+    background-color: var(--blue);
+    padding: 6rem 10% 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+    min-height: 100vh;
+}
+
+.coffe-img {
+    width: 65rem;
+    height: 37rem;
+    background-color: var(--black);
+    border-radius: 20rem;
+    transform: rotate(-50deg);
+    position: absolute;
+    right: -15rem;
+    top: -10rem;
+    z-index: 0;
+}
+
+@media (max-width:756px) {
+    .coffe-img {
+        background-color: transparent;
+        transform: rotate(-19deg);
+        position: absolute;
+        right: -40rem;
+        top: -4%;
+        opacity: .8;
+
+    }
+}
+
+.coffe-img img {
+    transform: rotate(50deg);
+    height: 35rem;
+    margin-left: 30px;
+}
+
+.welcome article {
+    margin-bottom: 7rem;
+    z-index: 1;
+    text-transform: capitalize;
+}
+
+.welcome article h1 {
+    font-size: 70px;
+}
+
+.welcome article h2 {
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.welcome article a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--pink);
+    padding: .7rem 1rem;
+    margin-top: 35px;
+    display: inline-block;
+    border-radius: 3px;
+    box-shadow: 10px 10px 24px rgba(123 123 123 / .75);
+    transition: var(--main-transition);
+}
+
+.welcome article a:hover {
+    box-shadow: 10px 10px 24px rgba(123 123 123 / 1);
+    background-color: #cb0b2b;
+}
+
+.welcome .scroll {
+    position: absolute;
+    bottom: 2rem;
+}
+
+.welcome .scroll a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    transition: var(--main-transition);
+}
+
+.scroll a:hover {
+    color: var(--blue);
+}
+
+/* end hero */
+.brands {
+    min-height: 100vh;
+    padding: 0 10% 0;
+    position: relative;
+}
+
+.brands .brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0;
+}
+
+
+
+.brands .brand:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+@media (max-width:756px) {
+    .brands .brand {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .brands .brand:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+}
+
+.brands .brand:nth-child(3) {
+    padding-bottom: 4rem;
+}
+
+.brands .brand img {
+    height: 20rem;
+}
+
+@media (max-width:756px) {
+    .brands .brand img {
+        height: 15rem;
+    }
+}
+
+.brands .brand>div {
+    flex: 1;
+}
+
+.brands .brand h2 {
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.brands .brand p {
+    line-height: 1.75;
+    color: var(--black);
+    font-weight: 500;
+}
+
+footer {
+    background-color: var(--black);
+    padding: 4rem 10%;
+    text-align: center;
+}
+
+footer .logo {
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+footer .logo .dot {
+    background-color: var(--blue);
+}
+
+footer .desc h3 {
+    text-transform: capitalize;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+}
+
+footer .desc p {
+    line-height: 1.75;
+    color: whitesmoke;
+    font-weight: 500;
+    width: 50%;
+    margin: 0 auto 1rem;
+}
+
+@media (max-width:756px) {
+    footer .desc p {
+        /* width:100% ; */
+    }
+}
+
+footer .desc .social_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .desc .social_icons a {
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: var(--blue);
+    margin-right: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition);
+}
+
+footer .desc .social_icons a:hover {
+    color: var(--blue);
+    background-color: white;
+}
