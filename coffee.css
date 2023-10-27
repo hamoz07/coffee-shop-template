@@ -303,7 +303,7 @@ footer .desc p {
 
 @media (max-width:756px) {
     footer .desc p {
-        /* width:100% ; */
+        width:100%;
     }
 }
 
