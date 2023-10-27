@@ -43,20 +43,6 @@ nav {
     z-index: 2;
 }
 
-@media (max-width:756px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .coffe-links li a.active_sec {
-        color: white;
-    }
-
-    nav ul li {
-        font-size: 13px;
-    }
-}
 
 .logo {
     font-weight: 700;
@@ -108,12 +94,22 @@ nav {
     color: var(--blue);
 }
 
-@media (max-width:756px) {
 
-    .coffe-links li a.active_sec {
-        color: white;
+@media (max-width:756px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
     }
 
+    .coffe-links li a.active_sec {
+        color: var(--black);
+    }
+    .coffe-links li a:hover{
+        color:white;
+    }
+    nav ul li {
+        font-size: 13px;
+    }
 }
 
 /* start hero */
@@ -303,7 +299,7 @@ footer .desc p {
 
 @media (max-width:756px) {
     footer .desc p {
-        width:100%;
+        width:100% ;
     }
 }
 
