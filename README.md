@@ -1,4 +1,4 @@
-# ☕🍵 coffee-shop-template
+# 💫☕ coffee-shop-template
 
 I created this html and css only project to master css more and more 
 
