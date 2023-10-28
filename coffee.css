@@ -101,12 +101,11 @@ nav {
         gap: 10px;
     }
 
-    .coffe-links li a.active_sec {
+    .coffe-links li a.active_sec,
+    .coffe-links li a:hover{
         color: var(--black);
     }
-    .coffe-links li a:hover{
-        color:var(--black);
-    }
+    
     nav ul li {
         font-size: 13px;
     }
