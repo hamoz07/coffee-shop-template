@@ -105,7 +105,7 @@ nav {
         color: var(--black);
     }
     .coffe-links li a:hover{
-        color:white;
+        color:var(--black);
     }
     nav ul li {
         font-size: 13px;
